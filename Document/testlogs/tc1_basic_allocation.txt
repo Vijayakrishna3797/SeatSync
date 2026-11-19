@@ -1,0 +1,80 @@
+Enter your choice: 1
+
+Hall name (e.g. Hall-A): Hall-A
+Number of rows (1-26): 4
+Seats per row (1-30): 5
+Hall 'Hall-A' added with 20 seats.
+
+Enter your choice: 3
+
+CSV file path (e.g. data/students_sample.csv): data/students_sample.csv
+Lines read: 15 | Loaded: 15 | Duplicates: 0 | Invalid: 0
+
+Enter your choice: 5
+
+Allocation complete: 15 student(s) seated, 0 still waiting.
+Rule check: 0 conflict(s) found.
+
+Enter your choice: 6
+
+  1. Hall-A (4x5)
+Select hall number: 1
+
+Hall: Hall-A  (4 rows x 5 columns)
+Occupied: 15/20   Blocked seats: 0
+
+         1         2         3         4         5     
+  A  [CSE-001 ][ECE-002 ][EEE-004 ][MECH-005][CIVI-007]
+  B  [ECE-008 ][CSE-003 ][MECH-010][EEE-009 ][CSE-006 ]
+  C  [EEE-014 ][ECE-012 ][CSE-011 ][MECH-015][  ---   ]
+  D  [CSE-013 ][  ---   ][  ---   ][  ---   ][  ---   ]
+
+Legend: [DEPT-nnn] = department + last 3 digits of reg no, [---] = free, [XXX] = blocked
+
+Enter your choice: 7
+
+Enter registration number: 106125003
+
+Name       : Karthik Das
+Reg. No.   : 106125003
+Department : CSE
+Hall       : Hall-A
+Seat       : B2  (row B, column 2)
+
+Enter your choice: 7
+
+Enter registration number: 106125999
+
+No student is registered with number 106125999.
+
+Enter your choice: 15
+
+==================================================
+          EXAMINATION SEATING REPORT
+==================================================
+Seating rule        : No two students of the same department may sit next to each other (front, back, left, right).
+Halls               : 1
+Students registered : 15
+Students seated     : 15 (100.0%)
+Students waiting    : 0
+Rule conflicts      : 0  (layout is valid)
+
+Hall-wise utilisation
+Hall          Layout   Usable  Seated  Blocked  Utilisation
+--------------------------------------------------------
+Hall-A        4x5      20      15      0        75.0%
+--------------------------------------------------------
+TOTAL                  20      15               75.0%
+
+Department-wise distribution
+Dept    Registered  Seated  Waiting
+-----------------------------------
+CIVIL   1           1       0
+CSE     5           5       0
+ECE     3           3       0
+EEE     3           3       0
+MECH    3           3       0
+
+Enter your choice: 18
+
+Exiting SeatSync. Good luck to all the students!

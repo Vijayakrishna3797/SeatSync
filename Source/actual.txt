@@ -1,0 +1,281 @@
+==========================================
+   SEATSYNC - EXAM SEATING ALLOCATION
+==========================================
+Rule: No two students of the same department may sit next to each other (front, back, left, right).
+
+=====================================
+           SEATSYNC MENU
+=====================================
+ 1. Add Examination Hall
+ 2. Register Student
+ 3. Load Students from CSV File
+ 4. Generate Demo Students
+ 5. Run Seat Allocation
+ 6. View Hall Seating Layout
+ 7. Find a Student's Seat
+ 8. Swap Two Students' Seats
+ 9. Move a Student to Another Seat
+10. Block / Unblock a Seat
+11. Remove a Student
+12. Toggle Diagonal Spacing Rule
+13. Clear All Allocations
+14. Generate Attendance Sheets
+15. Generate Examination Report
+16. Export Seating Plan (CSV + TXT)
+17. List Students Without a Seat
+18. Exit
+-------------------------------------
+Enter your choice: 1
+
+Hall name (e.g. Hall-A): Hall-A
+Number of rows (1-26): 4
+Seats per row (1-30): 5
+Hall 'Hall-A' added with 20 seats.
+
+=====================================
+           SEATSYNC MENU
+=====================================
+ 1. Add Examination Hall
+ 2. Register Student
+ 3. Load Students from CSV File
+ 4. Generate Demo Students
+ 5. Run Seat Allocation
+ 6. View Hall Seating Layout
+ 7. Find a Student's Seat
+ 8. Swap Two Students' Seats
+ 9. Move a Student to Another Seat
+10. Block / Unblock a Seat
+11. Remove a Student
+12. Toggle Diagonal Spacing Rule
+13. Clear All Allocations
+14. Generate Attendance Sheets
+15. Generate Examination Report
+16. Export Seating Plan (CSV + TXT)
+17. List Students Without a Seat
+18. Exit
+-------------------------------------
+Enter your choice: 1
+
+Hall name (e.g. Hall-A): Hall-B
+Number of rows (1-26): 3
+Seats per row (1-30): 3
+Hall 'Hall-B' added with 9 seats.
+
+=====================================
+           SEATSYNC MENU
+=====================================
+ 1. Add Examination Hall
+ 2. Register Student
+ 3. Load Students from CSV File
+ 4. Generate Demo Students
+ 5. Run Seat Allocation
+ 6. View Hall Seating Layout
+ 7. Find a Student's Seat
+ 8. Swap Two Students' Seats
+ 9. Move a Student to Another Seat
+10. Block / Unblock a Seat
+11. Remove a Student
+12. Toggle Diagonal Spacing Rule
+13. Clear All Allocations
+14. Generate Attendance Sheets
+15. Generate Examination Report
+16. Export Seating Plan (CSV + TXT)
+17. List Students Without a Seat
+18. Exit
+-------------------------------------
+Enter your choice: 4
+
+How many demo students (1-500)? 20
+20 demo students registered.
+
+=====================================
+           SEATSYNC MENU
+=====================================
+ 1. Add Examination Hall
+ 2. Register Student
+ 3. Load Students from CSV File
+ 4. Generate Demo Students
+ 5. Run Seat Allocation
+ 6. View Hall Seating Layout
+ 7. Find a Student's Seat
+ 8. Swap Two Students' Seats
+ 9. Move a Student to Another Seat
+10. Block / Unblock a Seat
+11. Remove a Student
+12. Toggle Diagonal Spacing Rule
+13. Clear All Allocations
+14. Generate Attendance Sheets
+15. Generate Examination Report
+16. Export Seating Plan (CSV + TXT)
+17. List Students Without a Seat
+18. Exit
+-------------------------------------
+Enter your choice: 5
+
+Allocation complete: 20 student(s) seated, 0 still waiting.
+Rule check: 0 conflict(s) found.
+
+=====================================
+           SEATSYNC MENU
+=====================================
+ 1. Add Examination Hall
+ 2. Register Student
+ 3. Load Students from CSV File
+ 4. Generate Demo Students
+ 5. Run Seat Allocation
+ 6. View Hall Seating Layout
+ 7. Find a Student's Seat
+ 8. Swap Two Students' Seats
+ 9. Move a Student to Another Seat
+10. Block / Unblock a Seat
+11. Remove a Student
+12. Toggle Diagonal Spacing Rule
+13. Clear All Allocations
+14. Generate Attendance Sheets
+15. Generate Examination Report
+16. Export Seating Plan (CSV + TXT)
+17. List Students Without a Seat
+18. Exit
+-------------------------------------
+Enter your choice: 14
+
+==================================================================================
+                         ATTENDANCE SHEET  -  Hall-A
+==================================================================================
+S.No  Reg. No.     Name                     Dept   Seat  Signature
+----------------------------------------------------------------------------------
+1     106125001    Priya Kumar              ECE    A1    ____________
+2     106125002    Karthik Kumar            CSE    A2    ____________
+3     106125003    Divya Raj                EEE    A3    ____________
+4     106125004    Rahul Raj                MECH   A4    ____________
+5     106125005    Meena Raj                CSE    B1    ____________
+6     106125006    Suresh Nair              CIVIL  A5    ____________
+7     106125007    Lakshmi Nair             ECE    B2    ____________
+8     106125008    Vikram Nair              EEE    B4    ____________
+9     106125009    Anitha Iyer              MECH   B3    ____________
+10    106125010    Arun Iyer                CSE    C2    ____________
+11    106125011    Priya Iyer               ECE    B5    ____________
+12    106125012    Karthik Reddy            CSE    C5    ____________
+13    106125013    Divya Reddy              EEE    C3    ____________
+14    106125014    Rahul Reddy              MECH   C4    ____________
+15    106125015    Meena Sharma             CSE    D4    ____________
+16    106125016    Suresh Sharma            CIVIL  C1    ____________
+17    106125017    Lakshmi Sharma           ECE    D1    ____________
+18    106125018    Vikram Kumar             EEE    D2    ____________
+19    106125019    Anitha Kumar             MECH   D3    ____________
+----------------------------------------------------------------------------------
+Total present on sheet: 19
+Could not write output/attendance_Hall_A.txt
+==================================================================================
+                         ATTENDANCE SHEET  -  Hall-B
+==================================================================================
+S.No  Reg. No.     Name                     Dept   Seat  Signature
+----------------------------------------------------------------------------------
+1     106125020    Arun Kumar               CSE    A1    ____________
+----------------------------------------------------------------------------------
+Total present on sheet: 1
+Could not write output/attendance_Hall_B.txt
+No seated students yet, so there are no attendance sheets.
+
+=====================================
+           SEATSYNC MENU
+=====================================
+ 1. Add Examination Hall
+ 2. Register Student
+ 3. Load Students from CSV File
+ 4. Generate Demo Students
+ 5. Run Seat Allocation
+ 6. View Hall Seating Layout
+ 7. Find a Student's Seat
+ 8. Swap Two Students' Seats
+ 9. Move a Student to Another Seat
+10. Block / Unblock a Seat
+11. Remove a Student
+12. Toggle Diagonal Spacing Rule
+13. Clear All Allocations
+14. Generate Attendance Sheets
+15. Generate Examination Report
+16. Export Seating Plan (CSV + TXT)
+17. List Students Without a Seat
+18. Exit
+-------------------------------------
+Enter your choice: 16
+
+Could not create files inside 'output'.
+
+=====================================
+           SEATSYNC MENU
+=====================================
+ 1. Add Examination Hall
+ 2. Register Student
+ 3. Load Students from CSV File
+ 4. Generate Demo Students
+ 5. Run Seat Allocation
+ 6. View Hall Seating Layout
+ 7. Find a Student's Seat
+ 8. Swap Two Students' Seats
+ 9. Move a Student to Another Seat
+10. Block / Unblock a Seat
+11. Remove a Student
+12. Toggle Diagonal Spacing Rule
+13. Clear All Allocations
+14. Generate Attendance Sheets
+15. Generate Examination Report
+16. Export Seating Plan (CSV + TXT)
+17. List Students Without a Seat
+18. Exit
+-------------------------------------
+Enter your choice: 15
+
+==================================================
+          EXAMINATION SEATING REPORT
+==================================================
+Seating rule        : No two students of the same department may sit next to each other (front, back, left, right).
+Halls               : 2
+Students registered : 20
+Students seated     : 20 (100.0%)
+Students waiting    : 0
+Rule conflicts      : 0  (layout is valid)
+
+Hall-wise utilisation
+Hall          Layout   Usable  Seated  Blocked  Utilisation
+--------------------------------------------------------
+Hall-A        4x5      20      19      0        95.0%
+Hall-B        3x3      9       1       0        11.1%
+--------------------------------------------------------
+TOTAL                  29      20               69.0%
+
+Department-wise distribution
+Dept    Registered  Seated  Waiting
+-----------------------------------
+CIVIL   2           2       0
+CSE     6           6       0
+ECE     4           4       0
+EEE     4           4       0
+MECH    4           4       0
+
+=====================================
+           SEATSYNC MENU
+=====================================
+ 1. Add Examination Hall
+ 2. Register Student
+ 3. Load Students from CSV File
+ 4. Generate Demo Students
+ 5. Run Seat Allocation
+ 6. View Hall Seating Layout
+ 7. Find a Student's Seat
+ 8. Swap Two Students' Seats
+ 9. Move a Student to Another Seat
+10. Block / Unblock a Seat
+11. Remove a Student
+12. Toggle Diagonal Spacing Rule
+13. Clear All Allocations
+14. Generate Attendance Sheets
+15. Generate Examination Report
+16. Export Seating Plan (CSV + TXT)
+17. List Students Without a Seat
+18. Exit
+-------------------------------------
+Enter your choice: 18
+
+Exiting SeatSync. Good luck to all the students!

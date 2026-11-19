@@ -1,0 +1,138 @@
+Enter your choice: 1
+
+Hall name (e.g. Hall-A): Hall-A
+Number of rows (1-26): 4
+Seats per row (1-30): 5
+Hall 'Hall-A' added with 20 seats.
+
+Enter your choice: 3
+
+CSV file path (e.g. data/students_sample.csv): data/students_sample.csv
+Lines read: 15 | Loaded: 15 | Duplicates: 0 | Invalid: 0
+
+Enter your choice: 5
+
+Allocation complete: 15 student(s) seated, 0 still waiting.
+Rule check: 0 conflict(s) found.
+
+Enter your choice: 6
+
+  1. Hall-A (4x5)
+Select hall number: 1
+
+Hall: Hall-A  (4 rows x 5 columns)
+Occupied: 15/20   Blocked seats: 0
+
+         1         2         3         4         5     
+  A  [CSE-001 ][ECE-002 ][EEE-004 ][MECH-005][CIVI-007]
+  B  [ECE-008 ][CSE-003 ][MECH-010][EEE-009 ][CSE-006 ]
+  C  [EEE-014 ][ECE-012 ][CSE-011 ][MECH-015][  ---   ]
+  D  [CSE-013 ][  ---   ][  ---   ][  ---   ][  ---   ]
+
+Legend: [DEPT-nnn] = department + last 3 digits of reg no, [---] = free, [XXX] = blocked
+
+Enter your choice: 8
+
+First student's registration number: 106125007
+Second student's registration number: 106125014
+Seats swapped successfully.
+
+Enter your choice: 8
+
+First student's registration number: 106125002
+Second student's registration number: 106125009
+Swap rejected: 106125009 cannot take the seat of 106125002: Neighbouring seat A3 already has a EEE student (106125004).
+
+Enter your choice: 9
+
+Student's registration number: 106125001
+  1. Hall-A (4x5)
+Select hall number: 1
+Enter seat (e.g. B4): D2
+Move rejected: Neighbouring seat D1 already has a CSE student (106125013).
+
+Enter your choice: 9
+
+Student's registration number: 106125001
+  1. Hall-A (4x5)
+Select hall number: 1
+Enter seat (e.g. B4): B1
+Move rejected: Seat B1 is already occupied by 106125008.
+
+Enter your choice: 9
+
+Student's registration number: 106125013
+  1. Hall-A (4x5)
+Select hall number: 1
+Enter seat (e.g. B4): D4
+Student moved to Hall-A, seat D4.
+
+Enter your choice: 10
+
+  1. Hall-A (4x5)
+Select hall number: 1
+Enter seat (e.g. B4): B2
+1 = Block seat (broken/reserved), 2 = Unblock seat: 1
+Seat B2 is now blocked.
+Student 106125003 was sitting there. Re-seated automatically at Hall-A, seat D1.
+
+Enter your choice: 10
+
+  1. Hall-A (4x5)
+Select hall number: 1
+Enter seat (e.g. B4): B2
+1 = Block seat (broken/reserved), 2 = Unblock seat: 2
+Seat B2 is available again.
+
+Enter your choice: 11
+
+Registration number to remove: 106125015
+Student removed; their seat (if any) is free again.
+
+Enter your choice: 6
+
+  1. Hall-A (4x5)
+Select hall number: 1
+
+Hall: Hall-A  (4 rows x 5 columns)
+Occupied: 14/20   Blocked seats: 0
+
+         1         2         3         4         5     
+  A  [CSE-001 ][ECE-002 ][EEE-004 ][MECH-005][EEE-014 ]
+  B  [ECE-008 ][  ---   ][MECH-010][EEE-009 ][CSE-006 ]
+  C  [CIVI-007][ECE-012 ][CSE-011 ][  ---   ][  ---   ]
+  D  [CSE-003 ][  ---   ][  ---   ][CSE-013 ][  ---   ]
+
+Legend: [DEPT-nnn] = department + last 3 digits of reg no, [---] = free, [XXX] = blocked
+
+Enter your choice: 15
+
+==================================================
+          EXAMINATION SEATING REPORT
+==================================================
+Seating rule        : No two students of the same department may sit next to each other (front, back, left, right).
+Halls               : 1
+Students registered : 14
+Students seated     : 14 (100.0%)
+Students waiting    : 0
+Rule conflicts      : 0  (layout is valid)
+
+Hall-wise utilisation
+Hall          Layout   Usable  Seated  Blocked  Utilisation
+--------------------------------------------------------
+Hall-A        4x5      20      14      0        70.0%
+--------------------------------------------------------
+TOTAL                  20      14               70.0%
+
+Department-wise distribution
+Dept    Registered  Seated  Waiting
+-----------------------------------
+CIVIL   1           1       0
+CSE     5           5       0
+ECE     3           3       0
+EEE     3           3       0
+MECH    2           2       0
+
+Enter your choice: 18
+
+Exiting SeatSync. Good luck to all the students!

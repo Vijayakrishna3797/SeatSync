@@ -1,0 +1,57 @@
+Enter your choice: 3
+
+CSV file path (e.g. data/students_sample.csv): data/students_errors.csv
+Lines read: 7 | Loaded: 3 | Duplicates: 1 | Invalid: 3
+  Line 5: Registration number 106125001 is already registered. -> skipped
+  Line 6: expected 'RegNo,Name,Dept' -> skipped
+  Line 8: Registration number must be letters/digits only. -> skipped
+  Line 9: expected 'RegNo,Name,Dept' -> skipped
+
+Enter your choice: 3
+
+CSV file path (e.g. data/students_sample.csv): data/nonexistent.csv
+Could not open file 'data/nonexistent.csv'.
+
+Enter your choice: 2
+
+Registration number: 106125010
+Name: Test Student
+Department (e.g. CSE): cse
+Student registered and added to the allocation queue.
+
+Enter your choice: 2
+
+Registration number: 106125010
+Name: Another Person
+Department (e.g. CSE): ece
+Could not register student: Registration number 106125010 is already registered.
+
+Enter your choice: 2
+
+Registration number: bad id!
+Name: Some Name
+Department (e.g. CSE): CSE
+Could not register student: Registration number must be letters/digits only.
+
+Enter your choice: 2
+
+Registration number: 106125011
+Name: 
+Department (e.g. CSE): CSE
+Could not register student: Name cannot be empty.
+
+Enter your choice: 17
+
+Students waiting for a seat (4), in queue order:
+  106125001   Arun Kumar              CSE
+  106125002   Priya Raj               ECE
+  106125006   Rahul Reddy             CSE
+  106125010   Test Student            CSE
+
+Enter your choice: 5
+
+Add at least one hall first (option 1).
+
+Enter your choice: 18
+
+Exiting SeatSync. Good luck to all the students!

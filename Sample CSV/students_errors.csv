@@ -1,0 +1,10 @@
+# sample file with deliberate mistakes
+RegNo,Name,Dept
+106125001,Arun Kumar,CSE
+106125002,Priya Raj,ECE
+106125001,Duplicate Person,EEE
+106125003,Karthik Nair
+
+10612@004,Divya Iyer,MECH
+106125005,,CIVIL
+106125006,Rahul Reddy,CSE

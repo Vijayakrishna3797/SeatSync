@@ -1,0 +1,83 @@
+Enter your choice: abc
+  Please enter a whole number between 1 and 18.
+Enter your choice: 99
+  Please enter a whole number between 1 and 18.
+Enter your choice: 0
+  Please enter a whole number between 1 and 18.
+Enter your choice: 6
+
+No halls available yet. Add a hall first (option 1).
+
+Enter your choice: 7
+
+Enter registration number: 106125001
+
+No student is registered with number 106125001.
+
+Enter your choice: 1
+
+Hall name (e.g. Hall-A): 
+Number of rows (1-26): 2
+Seats per row (1-30): 2
+Could not add hall: Hall name cannot be empty.
+
+Enter your choice: 1
+
+Hall name (e.g. Hall-A): Hall-A
+Number of rows (1-26): 30
+  Please enter a whole number between 1 and 26.
+Number of rows (1-26): 4
+Seats per row (1-30): 5
+Hall 'Hall-A' added with 20 seats.
+
+Enter your choice: 1
+
+Hall name (e.g. Hall-A): hall-a
+Number of rows (1-26): 2
+Seats per row (1-30): 2
+Could not add hall: A hall named 'Hall-A' already exists.
+
+Enter your choice: 10
+
+  1. Hall-A (4x5)
+Select hall number: 1
+Enter seat (e.g. B4): Z9
+  Invalid seat. Rows are A-D, columns 1-5.
+Enter seat (e.g. B4): A1
+1 = Block seat (broken/reserved), 2 = Unblock seat: 1
+Seat A1 is now blocked.
+
+Enter your choice: 10
+
+  1. Hall-A (4x5)
+Select hall number: 1
+Enter seat (e.g. B4): A1
+1 = Block seat (broken/reserved), 2 = Unblock seat: 1
+Could not block seat: Seat A1 is already blocked.
+
+Enter your choice: 10
+
+  1. Hall-A (4x5)
+Select hall number: 1
+Enter seat (e.g. B4): B2
+1 = Block seat (broken/reserved), 2 = Unblock seat: 2
+Could not unblock seat: Seat B2 is not blocked.
+
+Enter your choice: 8
+
+First student's registration number: 106125001
+Second student's registration number: 106125002
+Swap rejected: 106125001 is not seated.
+
+Enter your choice: 14
+
+No seated students yet, so there are no attendance sheets.
+
+Enter your choice: 13
+
+This empties every seat. Type 'yes' to confirm: no
+Cancelled.
+
+Enter your choice: 18
+
+Exiting SeatSync. Good luck to all the students!

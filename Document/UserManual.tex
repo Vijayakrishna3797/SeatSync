@@ -1,0 +1,123 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{microtype}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{SeatSync}
+\lhead{User Manual}
+\cfoot{\thepage}
+
+\setlist[itemize]{noitemsep,topsep=2pt,leftmargin=1.2cm}
+
+\title{\vspace{-2cm}\textbf{SeatSync}\\\large User Documentation and Technical Summary}
+\author{Team Data Sphere --- Developed in C++}
+\date{}
+
+\begin{document}
+\maketitle
+\vspace{-0.4cm}
+\hrule
+\vspace{0.4cm}
+
+\section*{1. Overview}
+\textbf{SeatSync} is a C++ console application that automatically allocates examination seats. The administrator creates the examination halls (rows $\times$ seats per row), registers the students and runs the allocator. Every student gets a seat such that \textbf{no two students of the same department sit next to each other}. The result can be inspected, modified and exported as attendance sheets, an examination report and a seating plan.
+
+\section*{2. Compilation and Execution}
+\textbf{To compile} (from the project's main folder), run \texttt{make}. Without \texttt{make}:
+\begin{verbatim}
+g++ -std=c++17 -Iinclude Source/*.cpp -o a.out
+\end{verbatim}
+\textbf{To run:} \texttt{./a.out} \qquad \textbf{To run all tests:} \texttt{make test}
+
+\section*{3. Menu Options}
+\begin{itemize}
+    \item \textbf{(1) Add Examination Hall:} name, number of rows (1--26) and seats per row (1--30).
+    \item \textbf{(2) Register Student:} registration number, name, department.
+    \item \textbf{(3) Load Students from CSV File:} bulk registration, see Section 4.
+    \item \textbf{(4) Generate Demo Students:} creates 1--500 sample students for experiments.
+    \item \textbf{(5) Run Seat Allocation:} seats every waiting student; students who cannot be placed legally stay in the queue.
+    \item \textbf{(6) View Hall Seating Layout:} prints the seat matrix of a hall.
+    \item \textbf{(7) Find a Student's Seat:} student view -- hall and seat for a registration number.
+    \item \textbf{(8) Swap Two Students' Seats} and \textbf{(9) Move a Student:} manual changes; a change that would break the spacing rule is refused with the reason.
+    \item \textbf{(10) Block / Unblock a Seat:} for broken or reserved seats. A student sitting on a seat that gets blocked is re-seated automatically.
+    \item \textbf{(11) Remove a Student:} frees their seat.
+    \item \textbf{(12) Toggle Diagonal Spacing Rule:} also forbids same-department students on diagonal seats (stricter).
+    \item \textbf{(13) Clear All Allocations:} empties all seats (asks for confirmation); use before re-allocating with a changed rule.
+    \item \textbf{(14) Generate Attendance Sheets:} one sheet per hall, shown on screen and saved in \texttt{output/}.
+    \item \textbf{(15) Generate Examination Report:} seated/waiting counts, hall utilisation, department distribution, rule check.
+    \item \textbf{(16) Export Seating Plan:} writes \texttt{seating\_plan.csv} and \texttt{seating\_plan.txt} into the \texttt{output/} folder.
+    \item \textbf{(17) List Students Without a Seat} and \textbf{(18) Exit.}
+\end{itemize}
+
+\section*{4. CSV File Format}
+\begin{verbatim}
+RegNo,Name,Dept
+106125127,S Vijayakrishna,CSE
+106125129,Tanishaa E A,CSE
+\end{verbatim}
+The header line is optional, lines starting with \texttt{\#} are comments and blank lines are ignored. Duplicate registration numbers and malformed lines are skipped and reported with their line number. Ready-made files are in the \texttt{data/} folder.
+
+\section*{5. Example Run}
+\begin{verbatim}
+Enter your choice: 1
+Hall name (e.g. Hall-A): Hall-A
+Number of rows (1-26): 4
+Seats per row (1-30): 5
+Hall 'Hall-A' added with 20 seats.
+
+Enter your choice: 3
+CSV file path: data/students_sample.csv
+Lines read: 15 | Loaded: 15 | Duplicates: 0 | Invalid: 0
+
+Enter your choice: 5
+Allocation complete: 15 student(s) seated, 0 still waiting.
+Rule check: 0 conflict(s) found.
+
+Enter your choice: 6          (then hall number 1)
+         1         2         3         4         5
+  A  [CSE-001 ][ECE-002 ][EEE-004 ][MECH-005][CIVI-007]
+  B  [ECE-008 ][CSE-003 ][MECH-010][EEE-009 ][CSE-006 ]
+  C  [EEE-014 ][ECE-012 ][CSE-011 ][MECH-015][  ---   ]
+  D  [CSE-013 ][  ---   ][  ---   ][  ---   ][  ---   ]
+\end{verbatim}
+Each seat shows the department and the last three digits of the registration number. \texttt{[---]} is a free seat and \texttt{[XXX]} a blocked seat. Seats are named by row letter and column number (\texttt{A1}, \texttt{B4}, \dots).
+
+\section*{6. Tips for Effective Use}
+\begin{itemize}
+    \item \textbf{Add halls before allocating.} Total capacity must be at least the number of students; otherwise the extra students wait in the queue.
+    \item \textbf{Students waiting?} Option (17) lists them. Add a hall (option 1) or unblock seats (option 10) and run option (5) again -- only the waiting students are processed.
+    \item \textbf{One department too large?} If one department has more than about half of the students, the spacing rule cannot seat all of them in one hall; use larger or additional halls.
+    \item \textbf{Registration numbers} are letters/digits only and are stored in upper case. Departments are normalised to upper case (\texttt{cse} $\to$ \texttt{CSE}).
+    \item \textbf{Deterministic results:} the same input always produces the same seating plan, so a plan can be reproduced and verified.
+    \item \textbf{Output files} appear in the \texttt{output/} folder (created automatically).
+\end{itemize}
+
+\section*{7. Technical Summary}
+\begin{itemize}
+    \item \textbf{Language \& Tools:} C++17, STL containers, \texttt{make}, \texttt{g++}.
+    \item \textbf{Core data structures:} a hand-written linked-list \textbf{Queue}, a \textbf{2D matrix} per hall, and a \textbf{hash table} (\texttt{unordered\_map}) for lookups.
+    \item \textbf{Algorithm:} students are grouped into one queue per department, the queues are served round-robin, and each student receives the first seat (scanning hall by hall, row by row) that obeys the spacing rule.
+    \item \textbf{Structure Overview:}
+    \begin{itemize}
+        \item \texttt{Student.h}, \texttt{Utils.h/.cpp} -- student record and string helpers.
+        \item \texttt{StudentQueue.h/.cpp} -- FIFO queue.
+        \item \texttt{Hall.h/.cpp} -- seat matrix and spacing rules.
+        \item \texttt{SeatAllocator.h/.cpp} -- allocation engine and administrator operations.
+        \item \texttt{DataLoader.h/.cpp} -- CSV import and demo data.
+        \item \texttt{ReportGenerator.h/.cpp} -- layouts, attendance sheets, reports, export.
+        \item \texttt{main.cpp} -- menu-driven console.
+    \end{itemize}
+\end{itemize}
+
+\vfill
+\noindent\textit{Developed for educational purposes to demonstrate queues, matrices and hash tables in a practical scheduling problem.}
+
+\end{document}

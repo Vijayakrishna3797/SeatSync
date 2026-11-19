@@ -1,0 +1,129 @@
+Enter your choice: 1
+
+Hall name (e.g. Hall-A): Hall-A
+Number of rows (1-26): 3
+Seats per row (1-30): 4
+Hall 'Hall-A' added with 12 seats.
+
+Enter your choice: 1
+
+Hall name (e.g. Hall-A): Hall-B
+Number of rows (1-26): 3
+Seats per row (1-30): 3
+Hall 'Hall-B' added with 9 seats.
+
+Enter your choice: 3
+
+CSV file path (e.g. data/students_sample.csv): data/students_overflow.csv
+Lines read: 25 | Loaded: 25 | Duplicates: 0 | Invalid: 0
+
+Enter your choice: 5
+
+Allocation complete: 21 student(s) seated, 4 still waiting.
+Rule check: 0 conflict(s) found.
+Some students could not be placed legally (not enough seats, or spacing rule too strict).
+Add another hall or unblock seats, then run allocation again (option 5).
+
+Enter your choice: 17
+
+Students waiting for a seat (4), in queue order:
+  106125020   Rahul Reddy             CSE
+  106125021   Meena Kumar             ECE
+  106125022   Suresh Iyer             CSE
+  106125023   Lakshmi Das             ECE
+
+Enter your choice: 15
+
+==================================================
+          EXAMINATION SEATING REPORT
+==================================================
+Seating rule        : No two students of the same department may sit next to each other (front, back, left, right).
+Halls               : 2
+Students registered : 25
+Students seated     : 21 (84.0%)
+Students waiting    : 4
+Rule conflicts      : 0  (layout is valid)
+
+Hall-wise utilisation
+Hall          Layout   Usable  Seated  Blocked  Utilisation
+--------------------------------------------------------
+Hall-A        3x4      12      12      0        100.0%
+Hall-B        3x3      9       9       0        100.0%
+--------------------------------------------------------
+TOTAL                  21      21               100.0%
+
+Department-wise distribution
+Dept    Registered  Seated  Waiting
+-----------------------------------
+CIVIL   3           3       0
+CSE     7           5       2
+ECE     7           5       2
+EEE     4           4       0
+MECH    4           4       0
+
+Enter your choice: 1
+
+Hall name (e.g. Hall-A): Hall-C
+Number of rows (1-26): 3
+Seats per row (1-30): 4
+Hall 'Hall-C' added with 12 seats.
+
+Enter your choice: 5
+
+Allocation complete: 4 student(s) seated, 0 still waiting.
+Rule check: 0 conflict(s) found.
+
+Enter your choice: 17
+
+No students are waiting. Everybody registered has a seat.
+
+Enter your choice: 6
+
+  1. Hall-A (3x4)
+  2. Hall-B (3x3)
+  3. Hall-C (3x4)
+Select hall number: 3
+
+Hall: Hall-C  (3 rows x 4 columns)
+Occupied: 4/12   Blocked seats: 0
+
+         1         2         3         4     
+  A  [CSE-020 ][ECE-021 ][CSE-022 ][ECE-023 ]
+  B  [  ---   ][  ---   ][  ---   ][  ---   ]
+  C  [  ---   ][  ---   ][  ---   ][  ---   ]
+
+Legend: [DEPT-nnn] = department + last 3 digits of reg no, [---] = free, [XXX] = blocked
+
+Enter your choice: 15
+
+==================================================
+          EXAMINATION SEATING REPORT
+==================================================
+Seating rule        : No two students of the same department may sit next to each other (front, back, left, right).
+Halls               : 3
+Students registered : 25
+Students seated     : 25 (100.0%)
+Students waiting    : 0
+Rule conflicts      : 0  (layout is valid)
+
+Hall-wise utilisation
+Hall          Layout   Usable  Seated  Blocked  Utilisation
+--------------------------------------------------------
+Hall-A        3x4      12      12      0        100.0%
+Hall-B        3x3      9       9       0        100.0%
+Hall-C        3x4      12      4       0        33.3%
+--------------------------------------------------------
+TOTAL                  33      25               75.8%
+
+Department-wise distribution
+Dept    Registered  Seated  Waiting
+-----------------------------------
+CIVIL   3           3       0
+CSE     7           7       0
+ECE     7           7       0
+EEE     4           4       0
+MECH    4           4       0
+
+Enter your choice: 18
+
+Exiting SeatSync. Good luck to all the students!

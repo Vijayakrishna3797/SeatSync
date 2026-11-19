@@ -1,0 +1,86 @@
+Enter your choice: 1
+
+Hall name (e.g. Hall-A): Hall-A
+Number of rows (1-26): 3
+Seats per row (1-30): 4
+Hall 'Hall-A' added with 12 seats.
+
+Enter your choice: 3
+
+CSV file path (e.g. data/students_sample.csv): data/students_dominant.csv
+Lines read: 12 | Loaded: 12 | Duplicates: 0 | Invalid: 0
+
+Enter your choice: 5
+
+Allocation complete: 9 student(s) seated, 3 still waiting.
+Rule check: 0 conflict(s) found.
+Some students could not be placed legally (not enough seats, or spacing rule too strict).
+Add another hall or unblock seats, then run allocation again (option 5).
+
+Enter your choice: 6
+
+  1. Hall-A (3x4)
+Select hall number: 1
+
+Hall: Hall-A  (3 rows x 4 columns)
+Occupied: 9/12   Blocked seats: 0
+
+         1         2         3         4     
+  A  [CSE-001 ][ECE-004 ][CSE-002 ][ECE-008 ]
+  B  [ECE-012 ][CSE-003 ][  ---   ][CSE-005 ]
+  C  [CSE-006 ][  ---   ][CSE-007 ][  ---   ]
+
+Legend: [DEPT-nnn] = department + last 3 digits of reg no, [---] = free, [XXX] = blocked
+
+Enter your choice: 17
+
+Students waiting for a seat (3), in queue order:
+  106125009   Vikram Raj              CSE
+  106125010   Anitha Reddy            CSE
+  106125011   Naveen Kumar            CSE
+
+Enter your choice: 13
+
+This empties every seat. Type 'yes' to confirm: yes
+All seats cleared. 12 student(s) are waiting for allocation.
+
+Enter your choice: 12
+
+Diagonal spacing rule is now ON.
+No two students of the same department may sit next to each other (front, back, left, right AND diagonals).
+(Applies to future placements. Use option 13 then option 5 to re-allocate everyone.)
+
+Enter your choice: 5
+
+Allocation complete: 7 student(s) seated, 5 still waiting.
+Rule check: 0 conflict(s) found.
+Some students could not be placed legally (not enough seats, or spacing rule too strict).
+Add another hall or unblock seats, then run allocation again (option 5).
+
+Enter your choice: 6
+
+  1. Hall-A (3x4)
+Select hall number: 1
+
+Hall: Hall-A  (3 rows x 4 columns)
+Occupied: 7/12   Blocked seats: 0
+
+         1         2         3         4     
+  A  [CSE-001 ][ECE-004 ][CSE-002 ][ECE-008 ]
+  B  [  ---   ][  ---   ][  ---   ][  ---   ]
+  C  [CSE-003 ][ECE-012 ][CSE-005 ][  ---   ]
+
+Legend: [DEPT-nnn] = department + last 3 digits of reg no, [---] = free, [XXX] = blocked
+
+Enter your choice: 17
+
+Students waiting for a seat (5), in queue order:
+  106125006   Meena Kumar             CSE
+  106125007   Suresh Iyer             CSE
+  106125009   Vikram Raj              CSE
+  106125010   Anitha Reddy            CSE
+  106125011   Naveen Kumar            CSE
+
+Enter your choice: 18
+
+Exiting SeatSync. Good luck to all the students!
