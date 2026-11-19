@@ -1,8 +1,5 @@
 # SeatSync - Online Exam Seating Allocation System
 
-**Team Data Sphere** | CSLR31 Data Structures Laboratory | NIT Tiruchirappalli
-S Vijayakrishna (106125127) | Tanishaa E A (106125129) | Torim Chakma (106125131) | Vadlakonda Sathwika (106125133)
-
 **SDG alignment:** SDG 4 - Quality Education (main), SDG 9 - Industry, Innovation and Infrastructure (secondary)
 
 SeatSync is a C++ console application that automatically assigns examination seats to students.
